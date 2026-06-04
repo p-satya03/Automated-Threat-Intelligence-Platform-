@@ -1,0 +1,1952 @@
+{
+  "nodes": [
+    {
+      "parameters": {
+        "url": "https://www.bellingcat.com/feed/",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1.2,
+      "position": [
+        -1536,
+        -1184
+      ],
+      "id": "95416ee9-1469-4198-9c50-03367d0174a3",
+      "name": "belingcat"
+    },
+    {
+      "parameters": {
+        "url": "https://asia.nikkei.com/rss/feed/nar",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1.2,
+      "position": [
+        -1536,
+        -1376
+      ],
+      "id": "cab37640-f771-4d5e-93ad-700aeee96129",
+      "name": "nekie asia"
+    },
+    {
+      "parameters": {
+        "url": "https://thediplomat.com/feed/",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1.2,
+      "position": [
+        -1536,
+        -1568
+      ],
+      "id": "16792d94-2b1c-4d1c-af01-dece01578345",
+      "name": "the diplomat"
+    },
+    {
+      "parameters": {
+        "url": "https://www.aljazeera.com/xml/rss/all.xml",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1.2,
+      "position": [
+        -1312,
+        -3888
+      ],
+      "id": "8f53720f-70f1-478b-b5fe-93bb1adc617c",
+      "name": "al jajera"
+    },
+    {
+      "parameters": {
+        "url": "={{ $json.url }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1.2,
+      "position": [
+        -1312,
+        -3696
+      ],
+      "id": "9e7ff9d0-3c79-4f26-aa6a-0fb1a0cb4cdc",
+      "name": "RSS Read"
+    },
+    {
+      "parameters": {
+        "jsCode": "return [\n  {\n    json: {\n      url: \"https://feeds.bbci.co.uk/news/rss.xml\",\n      category: \"topnews\"\n    }\n  },\n  {\n    json: {\n      url: \"https://feeds.bbci.co.uk/news/world/rss.xml\",\n      category: \"world\"\n    }\n  },\n  {\n    json: {\n      url: \"https://feeds.bbci.co.uk/news/politics/rss.xml\",\n      category: \"politics\"\n    }\n  },\n  {\n    json: {\n      url: \"https://feeds.bbci.co.uk/news/world/asia/rss.xml\",\n      category: \"asia\"\n    }\n  }\n];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -1536,
+        -3696
+      ],
+      "id": "7f9e6756-65a2-4b3b-bf27-f2127c4e3194",
+      "name": "bbc"
+    },
+    {
+      "parameters": {
+        "url": "https://foreignpolicy.com/feed/",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1.2,
+      "position": [
+        -1536,
+        -1760
+      ],
+      "id": "d6eec149-a512-4fa9-83cb-2b2e532149e9",
+      "name": "foreignpolicy"
+    },
+    {
+      "parameters": {
+        "url": "https://www.foreignaffairs.com/rss.xml",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1.2,
+      "position": [
+        -1536,
+        -1952
+      ],
+      "id": "2194c609-c83a-4421-844f-bcb964b0f7c0",
+      "name": "foreignaffairs"
+    },
+    {
+      "parameters": {
+        "url": "={{ $json.url }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1.2,
+      "position": [
+        -1312,
+        -3312
+      ],
+      "id": "deb16707-d625-458f-908c-a783c96e0e43",
+      "name": "RSS Read1"
+    },
+    {
+      "parameters": {
+        "jsCode": "return [\n  {\n    json: {\n      url: \"https://www.thehindu.com/news/feeder/default.rss\",\n      category: \"news\"\n    }\n  },\n  {\n    json: {\n      url: \"https://www.thehindu.com/business/feeder/default.rss\",\n      category: \"business\"\n    }\n  },\n    {\n    json: {\n      url: \"https://www.thehindu.com/news/national/feeder/default.rss\",\n      category: \"national\"\n    }\n  },\n  {\n    json: {\n      url: \"https://www.thehindu.com/news/international/feeder/default.rss\",\n      category: \"international\"\n    }\n  },\n    {\n    json: {\n      url: \"https://www.thehindu.com/news/cities/feeder/default.rss\",\n      category: \"cities\"\n    }\n  },\n    {\n    json: {\n      url: \"https://www.thehindu.com/news/states/feeder/default.rss\",\n      category: \"states\"\n    }\n  },\n];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -1536,
+        -3312
+      ],
+      "id": "e35c41b4-2492-43e9-9d0a-b517cf26deb0",
+      "name": "the hindu"
+    },
+    {
+      "parameters": {
+        "url": "={{ $json.url }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1.2,
+      "position": [
+        -1312,
+        -3504
+      ],
+      "id": "dbb4a56d-08cf-4345-9434-6d166bf14a58",
+      "name": "RSS Read2",
+      "retryOnFail": true,
+      "waitBetweenTries": 2000,
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "jsCode": "return [\n  {\n    json: {\n      url: \"https://indianexpress.com/section/india/feed/\",\n      category: \"india\"\n    }\n  },\n  {\n    json: {\n      url: \"https://indianexpress.com/section/live-news/feed/\",\n      category: \"livenews\"\n    }\n  },\n    {\n    json: {\n      url: \"https://indianexpress.com/section/pakistan/feed/\",\n      category: \"pakistan\"\n    }\n  },\n      {\n    json: {\n      url: \"https://indianexpress.com/section/politics/feed/\",\n      category: \"politics\"\n    }\n  },\n        {\n    json: {\n      url: \"https://indianexpress.com/section/trending/feed/\",\n      category: \"trending\"\n    }\n  },\n          {\n    json: {\n      url: \"https://indianexpress.com/section/world/feed/\",\n      category: \"world\"\n    }\n  },\n];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -1536,
+        -3504
+      ],
+      "id": "df03cc66-ea59-4d33-9627-a35397c9abf8",
+      "name": "india express"
+    },
+    {
+      "parameters": {
+        "url": "https://ddnews.gov.in/en/rss-feeds/",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1.2,
+      "position": [
+        -1312,
+        -2544
+      ],
+      "id": "d96fcedf-e2e1-4e39-ae0c-a11d4c53b0ca",
+      "name": "DDNEWS_nationalFeeds",
+      "alwaysOutputData": true,
+      "retryOnFail": true,
+      "notesInFlow": false,
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "url": "https://www.hindustantimes.com/feeds/rss/india-news/rssfeed.xml",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1.2,
+      "position": [
+        -1312,
+        -2160
+      ],
+      "id": "2abafacd-83da-41b6-b406-1a122c769dfa",
+      "name": "HindustanT_india"
+    },
+    {
+      "parameters": {
+        "url": "https://zeenews.india.com/rss/world-news.xml",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1.2,
+      "position": [
+        -1536,
+        -4272
+      ],
+      "id": "bb872837-cafe-4f49-910e-95cbdd5d931d",
+      "name": "zeenewsWorld"
+    },
+    {
+      "parameters": {
+        "url": "https://www.indiatvnews.com/rssnews/topstory-world.xml",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1.2,
+      "position": [
+        -1536,
+        -4080
+      ],
+      "id": "426851d0-c10e-4136-a836-fb86abb3993d",
+      "name": "indiatv"
+    },
+    {
+      "parameters": {
+        "url": "https://feeds.feedburner.com/TheHackersNews",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1.2,
+      "position": [
+        -1536,
+        176
+      ],
+      "id": "f44a4c87-b406-4f39-bc93-b2be0eda9055",
+      "name": "theHackerNewsFeeds"
+    },
+    {
+      "parameters": {
+        "url": "https://cms.iansnews.in/api/elastic/news/list/",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "language",
+              "value": "english"
+            },
+            {
+              "name": "page",
+              "value": "3"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.4,
+      "position": [
+        -1312,
+        -2352
+      ],
+      "id": "f76b435c-c050-4652-9eb0-dd6d25c983cb",
+      "name": "IANS Get News"
+    },
+    {
+      "parameters": {
+        "jsCode": "return items.map(item => {\n  const data = item.json || {};\n\n  const firstNonEmpty = (...values) => {\n    for (const value of values) {\n      if (\n        value !== undefined &&\n        value !== null &&\n        String(value).trim() !== ''\n      ) {\n        return value;\n      }\n    }\n    return null;\n  };\n\n  const rawDate = firstNonEmpty(\n    data.isoDate,\n    data.pubDate,\n    data.publishedAt,\n    data.published_at,\n    data.datePublished,\n    data.publishDate,\n    data.published,\n    data.createdAt,\n    data.created_at,\n    data.updatedAt,\n    data.updated_at,\n    data.date,\n    data.timestamp\n  );\n\n  let normalizedDate = null;\n\n  if (rawDate) {\n    const parsed = new Date(rawDate);\n\n    if (!isNaN(parsed.getTime())) {\n      normalizedDate = parsed.toISOString();\n    } else {\n      normalizedDate = String(rawDate);\n    }\n  }\n\n  return {\n    json: {\n      title: firstNonEmpty(\n        data.title,\n        data.headline,\n        data.name,\n        data.subject,\n        data.articleTitle\n      ),\n\n      content: firstNonEmpty(\n        data.content,\n        data['content:encoded'],\n        data.description,\n        data.summary,\n        data.contentSnippet,\n        data.excerpt,\n        data.body,\n        data.text,\n        data.article,\n        data.story,\n        data.fullText,\n        data.message,\n        data.caption\n      ),\n\n      link: firstNonEmpty(\n        data.link,\n        data.url,\n        data.guid,\n        data.id,\n        data['rdf:about'],\n        data.permalink,\n        data.canonicalUrl\n      ),\n\n      date: normalizedDate\n    }\n  };\n});"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -1312,
+        -1184
+      ],
+      "id": "50fc9fe7-09a8-4ad9-96ee-8c14b1885942",
+      "name": "Code in JavaScript"
+    },
+    {
+      "parameters": {
+        "jsCode": "return items.map(item => {\n  const data = item.json || {};\n\n  const firstNonEmpty = (...values) => {\n    for (const value of values) {\n      if (\n        value !== undefined &&\n        value !== null &&\n        String(value).trim() !== ''\n      ) {\n        return value;\n      }\n    }\n    return null;\n  };\n\n  const rawDate = firstNonEmpty(\n    data.isoDate,\n    data.pubDate,\n    data.publishedAt,\n    data.published_at,\n    data.datePublished,\n    data.publishDate,\n    data.published,\n    data.createdAt,\n    data.created_at,\n    data.updatedAt,\n    data.updated_at,\n    data.date,\n    data.timestamp\n  );\n\n  let normalizedDate = null;\n\n  if (rawDate) {\n    const parsed = new Date(rawDate);\n\n    if (!isNaN(parsed.getTime())) {\n      normalizedDate = parsed.toISOString();\n    } else {\n      normalizedDate = String(rawDate);\n    }\n  }\n\n  return {\n    json: {\n      title: firstNonEmpty(\n        data.title,\n        data.headline,\n        data.name,\n        data.subject,\n        data.articleTitle\n      ),\n\n      content: firstNonEmpty(\n        data.content,\n        data['content:encoded'],\n        data.description,\n        data.summary,\n        data.contentSnippet,\n        data.excerpt,\n        data.body,\n        data.text,\n        data.article,\n        data.story,\n        data.fullText,\n        data.message,\n        data.caption\n      ),\n\n      link: firstNonEmpty(\n        data.link,\n        data.url,\n        data.guid,\n        data.id,\n        data['rdf:about'],\n        data.permalink,\n        data.canonicalUrl\n      ),\n\n      date: normalizedDate\n    }\n  };\n});"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -1312,
+        -1568
+      ],
+      "id": "153a63a1-4f6a-45ae-b1c3-939d94ca0657",
+      "name": "Code in JavaScript1"
+    },
+    {
+      "parameters": {
+        "jsCode": "return items.map(item => {\n  const data = item.json || {};\n\n  const firstNonEmpty = (...values) => {\n    for (const value of values) {\n      if (\n        value !== undefined &&\n        value !== null &&\n        String(value).trim() !== ''\n      ) {\n        return value;\n      }\n    }\n    return null;\n  };\n\n  const rawDate = firstNonEmpty(\n    data.isoDate,\n    data.pubDate,\n    data.publishedAt,\n    data.published_at,\n    data.datePublished,\n    data.publishDate,\n    data.published,\n    data.createdAt,\n    data.created_at,\n    data.updatedAt,\n    data.updated_at,\n    data.date,\n    data.timestamp\n  );\n\n  let normalizedDate = null;\n\n  if (rawDate) {\n    const parsed = new Date(rawDate);\n\n    if (!isNaN(parsed.getTime())) {\n      normalizedDate = parsed.toISOString();\n    } else {\n      normalizedDate = String(rawDate);\n    }\n  }\n\n  return {\n    json: {\n      title: firstNonEmpty(\n        data.title,\n        data.headline,\n        data.name,\n        data.subject,\n        data.articleTitle\n      ),\n\n      content: firstNonEmpty(\n        data.content,\n        data['content:encoded'],\n        data.description,\n        data.summary,\n        data.contentSnippet,\n        data.excerpt,\n        data.body,\n        data.text,\n        data.article,\n        data.story,\n        data.fullText,\n        data.message,\n        data.caption\n      ),\n\n      link: firstNonEmpty(\n        data.link,\n        data.url,\n        data.guid,\n        data.id,\n        data['rdf:about'],\n        data.permalink,\n        data.canonicalUrl\n      ),\n\n      date: normalizedDate\n    }\n  };\n});"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -1088,
+        -3504
+      ],
+      "id": "c7935520-c7bc-463c-8fbf-ab2b6902149f",
+      "name": "Code in JavaScript2"
+    },
+    {
+      "parameters": {
+        "url": "={{ $json.url }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1.2,
+      "position": [
+        -1312,
+        -2928
+      ],
+      "id": "5ad769ab-6ef7-45c9-8ba5-79f39b443c02",
+      "name": "RSS Read3"
+    },
+    {
+      "parameters": {
+        "jsCode": "return [\n  {\n    json: {\n      url: \"https://www.firstpost.com/commonfeeds/v1/mfp/rss/india.xml\",\n      category: \"india\"\n    }\n  },\n  {\n    json: {\n      url: \"https://www.firstpost.com/commonfeeds/v1/mfp/rss/world.xml\",\n      category: \"world\"\n    }\n  },\n  {\n    json: {\n      url: \"https://www.firstpost.com/commonfeeds/v1/mfp/rss/politics.xml\",\n      category: \"politics\"\n    }\n  }\n];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -1536,
+        -2928
+      ],
+      "id": "8a0c4d70-d7d9-4d7e-acc2-57fe9dfa6499",
+      "name": "firstpost"
+    },
+    {
+      "parameters": {
+        "url": "={{ $json.url }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1.2,
+      "position": [
+        -1312,
+        -3120
+      ],
+      "id": "e7d3da7b-1a34-47ab-b5e1-d6b648582edb",
+      "name": "RSS Read4"
+    },
+    {
+      "parameters": {
+        "jsCode": "return [\n  {\n    json: {\n      url: \"https://www.indiatoday.in/rss/1206514\",\n      category: \"feed1\"\n    }\n  },\n  {\n    json: {\n      url: \"https://www.indiatoday.in/rss/1206577\",\n      category: \"feed2\"\n    }\n  },\n  {\n    json: {\n      url: \"https://www.indiatoday.in/rss/1206500\",\n      category: \"feed3\"\n    }\n  }\n];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -1536,
+        -3120
+      ],
+      "id": "944bb090-eaa0-4650-8f8d-199e26ecf054",
+      "name": "indiatoday"
+    },
+    {
+      "parameters": {
+        "url": "={{ $json.url }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1.2,
+      "position": [
+        -1312,
+        -2736
+      ],
+      "id": "9990cb69-9108-463e-a590-68fced3e628c",
+      "name": "RSS Read5"
+    },
+    {
+      "parameters": {
+        "jsCode": "return [\n  {\n    json: {\n      url: \"https://feeds.feedburner.com/ndtvnews-latest\",\n      category: \"latest\"\n    }\n  },\n  {\n    json: {\n      url: \"https://feeds.feedburner.com/ndtvnews-india-news\",\n      category: \"indianews\"\n    }\n  },\n    {\n    json: {\n      url: \"https://feeds.feedburner.com/ndtvnews-top-stories\",\n      category: \"top\"\n    }}\n];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -1536,
+        -2736
+      ],
+      "id": "baa5c2e9-2c70-40f3-a83d-1bf237b90c03",
+      "name": "ndtv"
+    },
+    {
+      "parameters": {
+        "url": "=https://breakingdefense.com/feed/",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1.2,
+      "position": [
+        -1536,
+        -416
+      ],
+      "id": "6ddb2ab5-80cc-420d-8835-713fee07880e",
+      "name": "breakingdefense"
+    },
+    {
+      "parameters": {
+        "url": "=https://www.defensenews.com/arc/outboundfeeds/rss/",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1.2,
+      "position": [
+        -1536,
+        -224
+      ],
+      "id": "8adbc824-078f-45cf-b3ef-e8d9f0b0b528",
+      "name": "defensenews"
+    },
+    {
+      "parameters": {
+        "url": "=https://warontherocks.com/feed/",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1.2,
+      "position": [
+        -1536,
+        -608
+      ],
+      "id": "bfaed1e9-757b-46eb-b5d3-838a9c7f586a",
+      "name": "warontherocks"
+    },
+    {
+      "parameters": {
+        "jsCode": "return items.map(item => ({\n  json: {\n    creator: item.json[\"dc:creator\"] || item.json.creator || \"\",\n    title: item.json.title || \"\",\n    link: item.json.link || \"\",\n    isoDate: item.json.isoDate || \"\",\n    contentSnippet:\n      item.json.contentSnippet ||\n      item.json[\"content:encodedSnippet\"] ||\n      \"\",\n    categories: Array.isArray(item.json.categories)\n      ? item.json.categories\n      : Object.values(item.json.categories || {}),\n  }\n}));"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -1312,
+        -992
+      ],
+      "id": "29231419-5bff-4857-8f23-5c88b3d95408",
+      "name": "Code in JavaScript3"
+    },
+    {
+      "parameters": {
+        "jsCode": "return items.map(item => ({\n  json: {\n    creator: item.json[\"dc:creator\"] || item.json.creator || \"\",\n    title: item.json.title || \"\",\n    link: item.json.link || \"\",\n    isoDate: item.json.isoDate || \"\",\n    contentSnippet:\n      item.json.contentSnippet ||\n      item.json[\"content:encodedSnippet\"] ||\n      \"\",\n    categories: Array.isArray(item.json.categories)\n      ? item.json.categories\n      : Object.values(item.json.categories || {}),\n  }\n}));"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -1312,
+        -608
+      ],
+      "id": "aa0feda5-ef48-460b-a674-3aea6c3140d0",
+      "name": "Code in JavaScript4"
+    },
+    {
+      "parameters": {
+        "jsCode": "return items.map(item => ({\n  json: {\n    creator: item.json[\"dc:creator\"] || item.json.creator || \"\",\n    title: item.json.title || \"\",\n    link: item.json.link || \"\",\n    isoDate: item.json.isoDate || \"\",\n    contentSnippet:\n      item.json.contentSnippet ||\n      item.json[\"content:encodedSnippet\"] ||\n      \"\",\n    categories: Array.isArray(item.json.categories)\n      ? item.json.categories\n      : Object.values(item.json.categories || {}),\n  }\n}));"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -1312,
+        -416
+      ],
+      "id": "9c713935-4960-43ff-a25e-37e448a24336",
+      "name": "Code in JavaScript5"
+    },
+    {
+      "parameters": {
+        "jsCode": "return items.map(item => ({\n  json: {\n    creator: item.json[\"dc:creator\"] || item.json.creator || \"\",\n    title: item.json.title || \"\",\n    link: item.json.link || \"\",\n    isoDate: item.json.isoDate || \"\",\n    contentSnippet:\n      item.json.contentSnippet ||\n      item.json[\"content:encodedSnippet\"] ||\n      \"\",\n    categories: Array.isArray(item.json.categories)\n      ? item.json.categories\n      : Object.values(item.json.categories || {}),\n  }\n}));"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -1312,
+        -224
+      ],
+      "id": "eb91bda6-4538-44a5-b00f-09bf05555faa",
+      "name": "Code in JavaScript6"
+    },
+    {
+      "parameters": {
+        "jsCode": "return items.map(item => ({\n  json: {\n    creator: item.json[\"dc:creator\"] || item.json.creator || \"\",\n    title: item.json.title || \"\",\n    link: item.json.link || \"\",\n    isoDate: item.json.isoDate || \"\",\n    contentSnippet:\n      item.json.contentSnippet ||\n      item.json[\"content:encodedSnippet\"] ||\n      \"\",\n    categories: Array.isArray(item.json.categories)\n      ? item.json.categories\n      : Object.values(item.json.categories || {}),\n  }\n}));"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -1312,
+        -800
+      ],
+      "id": "cfa4af1c-b446-4b24-9cb2-f8db1fa2f3d9",
+      "name": "Code in JavaScript7"
+    },
+    {
+      "parameters": {
+        "url": "=https://www.longwarjournal.org/feed",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1.2,
+      "position": [
+        -1536,
+        -16
+      ],
+      "id": "3dead711-4fcd-44a6-b0f8-914346e8cc48",
+      "name": "longwarjournal"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.2,
+      "position": [
+        -1088,
+        -16
+      ],
+      "id": "32e19962-8123-428c-8a5e-c927d8afd1e7",
+      "name": "04_TERRORISM_INSURGENCY"
+    },
+    {
+      "parameters": {
+        "jsCode": "return items.map(item => ({\n  json: {\n    creator: item.json[\"dc:creator\"] || item.json.creator || \"\",\n    title: item.json.title || \"\",\n    link: item.json.link || \"\",\n    isoDate: item.json.isoDate || \"\",\n    contentSnippet:\n      item.json.contentSnippet ||\n      item.json[\"content:encodedSnippet\"] ||\n      \"\",\n    categories: Array.isArray(item.json.categories)\n      ? item.json.categories\n      : Object.values(item.json.categories || {}),\n  }\n}));"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -1312,
+        -16
+      ],
+      "id": "e749064d-ac1a-4eae-8977-3c80621ccfc8",
+      "name": "Code in JavaScript8"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.2,
+      "position": [
+        -1088,
+        -896
+      ],
+      "id": "db55118f-45fd-410e-bd55-e59c5846e9e0",
+      "name": "06_THINK_TANKS"
+    },
+    {
+      "parameters": {
+        "url": "=https://www.atlanticcouncil.org/feed/",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1.2,
+      "position": [
+        -1536,
+        -800
+      ],
+      "id": "12c8f2fc-9f12-44f5-b458-b12e686a6221",
+      "name": "INTERNATIONAL atlanticcouncil"
+    },
+    {
+      "parameters": {
+        "url": "=https://www.gatewayhouse.in/feed/",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1.2,
+      "position": [
+        -1536,
+        -992
+      ],
+      "id": "94db3400-4a9d-494b-92f4-b4cb6e976f9c",
+      "name": "INDIAN gatewayhouse"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.2,
+      "position": [
+        -1088,
+        -1184
+      ],
+      "id": "cb924912-f8e9-4418-bf64-2c38b3c027ad",
+      "name": "05_OSINT_INVESTIGATIONS"
+    },
+    {
+      "parameters": {
+        "jsCode": "return items.map(item => {\n  const data = item.json || {};\n\n  const firstNonEmpty = (...values) => {\n    for (const value of values) {\n      if (\n        value !== undefined &&\n        value !== null &&\n        String(value).trim() !== ''\n      ) {\n        return value;\n      }\n    }\n    return null;\n  };\n\n  const rawDate = firstNonEmpty(\n    data.isoDate,\n    data.pubDate,\n    data.publishedAt,\n    data.published_at,\n    data.datePublished,\n    data.publishDate,\n    data.published,\n    data.createdAt,\n    data.created_at,\n    data.updatedAt,\n    data.updated_at,\n    data.date,\n    data.timestamp\n  );\n\n  let normalizedDate = null;\n\n  if (rawDate) {\n    const parsed = new Date(rawDate);\n\n    if (!isNaN(parsed.getTime())) {\n      normalizedDate = parsed.toISOString();\n    } else {\n      normalizedDate = String(rawDate);\n    }\n  }\n\n  return {\n    json: {\n      title: firstNonEmpty(\n        data.title,\n        data.headline,\n        data.name,\n        data.subject,\n        data.articleTitle\n      ),\n\n      content: firstNonEmpty(\n        data.content,\n        data['content:encoded'],\n        data.description,\n        data.summary,\n        data.contentSnippet,\n        data.excerpt,\n        data.body,\n        data.text,\n        data.article,\n        data.story,\n        data.fullText,\n        data.message,\n        data.caption\n      ),\n\n      link: firstNonEmpty(\n        data.link,\n        data.url,\n        data.guid,\n        data.id,\n        data['rdf:about'],\n        data.permalink,\n        data.canonicalUrl\n      ),\n\n      date: normalizedDate\n    }\n  };\n});"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -1312,
+        176
+      ],
+      "id": "dbf25f38-513f-44eb-b2f5-e744189d6323",
+      "name": "Code in JavaScript9"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.2,
+      "position": [
+        -1088,
+        176
+      ],
+      "id": "67fcc1d6-833f-421f-b5e3-2581f9209943",
+      "name": "07_CYBERSECURITY"
+    },
+    {
+      "parameters": {
+        "numberInputs": 4
+      },
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.2,
+      "position": [
+        -1088,
+        -448
+      ],
+      "id": "c9a5ede7-aced-44c1-af9b-ae6ed17ee9ab",
+      "name": "03_DEFENSE_SECURITY"
+    },
+    {
+      "parameters": {
+        "jsCode": "return items.map(item => {\n  const data = item.json || {};\n\n  const firstNonEmpty = (...values) => {\n    for (const value of values) {\n      if (\n        value !== undefined &&\n        value !== null &&\n        String(value).trim() !== ''\n      ) {\n        return value;\n      }\n    }\n    return null;\n  };\n\n  const rawDate = firstNonEmpty(\n    data.isoDate,\n    data.pubDate,\n    data.publishedAt,\n    data.published_at,\n    data.datePublished,\n    data.publishDate,\n    data.published,\n    data.createdAt,\n    data.created_at,\n    data.updatedAt,\n    data.updated_at,\n    data.date,\n    data.timestamp\n  );\n\n  let normalizedDate = null;\n\n  if (rawDate) {\n    const parsed = new Date(rawDate);\n\n    if (!isNaN(parsed.getTime())) {\n      normalizedDate = parsed.toISOString();\n    } else {\n      normalizedDate = String(rawDate);\n    }\n  }\n\n  return {\n    json: {\n      title: firstNonEmpty(\n        data.title,\n        data.headline,\n        data.name,\n        data.subject,\n        data.articleTitle\n      ),\n\n      content: firstNonEmpty(\n        data.content,\n        data['content:encoded'],\n        data.description,\n        data.summary,\n        data.contentSnippet,\n        data.excerpt,\n        data.body,\n        data.text,\n        data.article,\n        data.story,\n        data.fullText,\n        data.message,\n        data.caption\n      ),\n\n      link: firstNonEmpty(\n        data.link,\n        data.url,\n        data.guid,\n        data.id,\n        data['rdf:about'],\n        data.permalink,\n        data.canonicalUrl\n      ),\n\n      date: normalizedDate\n    }\n  };\n});"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -1312,
+        -1376
+      ],
+      "id": "09e0f14e-ea8f-4fdc-b219-25b3812e9761",
+      "name": "Code in JavaScript10"
+    },
+    {
+      "parameters": {
+        "jsCode": "return items.map(item => {\n  const data = item.json || {};\n\n  const firstNonEmpty = (...values) => {\n    for (const value of values) {\n      if (\n        value !== undefined &&\n        value !== null &&\n        String(value).trim() !== ''\n      ) {\n        return value;\n      }\n    }\n    return null;\n  };\n\n  const rawDate = firstNonEmpty(\n    data.isoDate,\n    data.pubDate,\n    data.publishedAt,\n    data.published_at,\n    data.datePublished,\n    data.publishDate,\n    data.published,\n    data.createdAt,\n    data.created_at,\n    data.updatedAt,\n    data.updated_at,\n    data.date,\n    data.timestamp\n  );\n\n  let normalizedDate = null;\n\n  if (rawDate) {\n    const parsed = new Date(rawDate);\n\n    if (!isNaN(parsed.getTime())) {\n      normalizedDate = parsed.toISOString();\n    } else {\n      normalizedDate = String(rawDate);\n    }\n  }\n\n  return {\n    json: {\n      title: firstNonEmpty(\n        data.title,\n        data.headline,\n        data.name,\n        data.subject,\n        data.articleTitle\n      ),\n\n      content: firstNonEmpty(\n        data.content,\n        data['content:encoded'],\n        data.description,\n        data.summary,\n        data.contentSnippet,\n        data.excerpt,\n        data.body,\n        data.text,\n        data.article,\n        data.story,\n        data.fullText,\n        data.message,\n        data.caption\n      ),\n\n      link: firstNonEmpty(\n        data.link,\n        data.url,\n        data.guid,\n        data.id,\n        data['rdf:about'],\n        data.permalink,\n        data.canonicalUrl\n      ),\n\n      date: normalizedDate\n    }\n  };\n});"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -1312,
+        -1760
+      ],
+      "id": "56675229-2f95-4e09-82d0-bb293f62dc59",
+      "name": "Code in JavaScript11"
+    },
+    {
+      "parameters": {
+        "jsCode": "return items.map(item => {\n  const data = item.json || {};\n\n  const firstNonEmpty = (...values) => {\n    for (const value of values) {\n      if (\n        value !== undefined &&\n        value !== null &&\n        String(value).trim() !== ''\n      ) {\n        return value;\n      }\n    }\n    return null;\n  };\n\n  const rawDate = firstNonEmpty(\n    data.isoDate,\n    data.pubDate,\n    data.publishedAt,\n    data.published_at,\n    data.datePublished,\n    data.publishDate,\n    data.published,\n    data.createdAt,\n    data.created_at,\n    data.updatedAt,\n    data.updated_at,\n    data.date,\n    data.timestamp\n  );\n\n  let normalizedDate = null;\n\n  if (rawDate) {\n    const parsed = new Date(rawDate);\n\n    if (!isNaN(parsed.getTime())) {\n      normalizedDate = parsed.toISOString();\n    } else {\n      normalizedDate = String(rawDate);\n    }\n  }\n\n  return {\n    json: {\n      title: firstNonEmpty(\n        data.title,\n        data.headline,\n        data.name,\n        data.subject,\n        data.articleTitle\n      ),\n\n      content: firstNonEmpty(\n        data.content,\n        data['content:encoded'],\n        data.description,\n        data.summary,\n        data.contentSnippet,\n        data.excerpt,\n        data.body,\n        data.text,\n        data.article,\n        data.story,\n        data.fullText,\n        data.message,\n        data.caption\n      ),\n\n      link: firstNonEmpty(\n        data.link,\n        data.url,\n        data.guid,\n        data.id,\n        data['rdf:about'],\n        data.permalink,\n        data.canonicalUrl\n      ),\n\n      date: normalizedDate\n    }\n  };\n});"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -1312,
+        -1952
+      ],
+      "id": "a35d24b2-8436-4424-b880-8966536ad6d2",
+      "name": "Code in JavaScript12"
+    },
+    {
+      "parameters": {
+        "jsCode": "return items.map(item => {\n  const data = item.json || {};\n\n  const firstNonEmpty = (...values) => {\n    for (const value of values) {\n      if (\n        value !== undefined &&\n        value !== null &&\n        String(value).trim() !== ''\n      ) {\n        return value;\n      }\n    }\n    return null;\n  };\n\n  const rawDate = firstNonEmpty(\n    data.isoDate,\n    data.pubDate,\n    data.publishedAt,\n    data.published_at,\n    data.datePublished,\n    data.publishDate,\n    data.published,\n    data.createdAt,\n    data.created_at,\n    data.updatedAt,\n    data.updated_at,\n    data.date,\n    data.timestamp\n  );\n\n  let normalizedDate = null;\n\n  if (rawDate) {\n    const parsed = new Date(rawDate);\n\n    if (!isNaN(parsed.getTime())) {\n      normalizedDate = parsed.toISOString();\n    } else {\n      normalizedDate = String(rawDate);\n    }\n  }\n\n  return {\n    json: {\n      title: firstNonEmpty(\n        data.title,\n        data.headline,\n        data.name,\n        data.subject,\n        data.articleTitle\n      ),\n\n      content: firstNonEmpty(\n        data.content,\n        data['content:encoded'],\n        data.description,\n        data.summary,\n        data.contentSnippet,\n        data.excerpt,\n        data.body,\n        data.text,\n        data.article,\n        data.story,\n        data.fullText,\n        data.message,\n        data.caption\n      ),\n\n      link: firstNonEmpty(\n        data.link,\n        data.url,\n        data.guid,\n        data.id,\n        data['rdf:about'],\n        data.permalink,\n        data.canonicalUrl\n      ),\n\n      date: normalizedDate\n    }\n  };\n});"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -1088,
+        -3888
+      ],
+      "id": "e633e393-e0fc-4ae4-9ce7-33eb3493bb16",
+      "name": "Code in JavaScript13"
+    },
+    {
+      "parameters": {
+        "jsCode": "return items.map(item => {\n  const data = item.json || {};\n\n  const firstNonEmpty = (...values) => {\n    for (const value of values) {\n      if (\n        value !== undefined &&\n        value !== null &&\n        String(value).trim() !== ''\n      ) {\n        return value;\n      }\n    }\n    return null;\n  };\n\n  const rawDate = firstNonEmpty(\n    data.isoDate,\n    data.pubDate,\n    data.publishedAt,\n    data.published_at,\n    data.datePublished,\n    data.publishDate,\n    data.published,\n    data.createdAt,\n    data.created_at,\n    data.updatedAt,\n    data.updated_at,\n    data.date,\n    data.timestamp\n  );\n\n  let normalizedDate = null;\n\n  if (rawDate) {\n    const parsed = new Date(rawDate);\n\n    if (!isNaN(parsed.getTime())) {\n      normalizedDate = parsed.toISOString();\n    } else {\n      normalizedDate = String(rawDate);\n    }\n  }\n\n  return {\n    json: {\n      title: firstNonEmpty(\n        data.title,\n        data.headline,\n        data.name,\n        data.subject,\n        data.articleTitle\n      ),\n\n      content: firstNonEmpty(\n        data.content,\n        data['content:encoded'],\n        data.description,\n        data.summary,\n        data.contentSnippet,\n        data.excerpt,\n        data.body,\n        data.text,\n        data.article,\n        data.story,\n        data.fullText,\n        data.message,\n        data.caption\n      ),\n\n      link: firstNonEmpty(\n        data.link,\n        data.url,\n        data.guid,\n        data.id,\n        data['rdf:about'],\n        data.permalink,\n        data.canonicalUrl\n      ),\n\n      date: normalizedDate\n    }\n  };\n});"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -1088,
+        -3696
+      ],
+      "id": "15ed4677-44e8-443c-92d2-7d4ca489e8a6",
+      "name": "Code in JavaScript14"
+    },
+    {
+      "parameters": {
+        "jsCode": "return items.map(item => {\n  const data = item.json || {};\n\n  const firstNonEmpty = (...values) => {\n    for (const value of values) {\n      if (\n        value !== undefined &&\n        value !== null &&\n        String(value).trim() !== ''\n      ) {\n        return value;\n      }\n    }\n    return null;\n  };\n\n  const rawDate = firstNonEmpty(\n    data.isoDate,\n    data.pubDate,\n    data.publishedAt,\n    data.published_at,\n    data.datePublished,\n    data.publishDate,\n    data.published,\n    data.createdAt,\n    data.created_at,\n    data.updatedAt,\n    data.updated_at,\n    data.date,\n    data.timestamp\n  );\n\n  let normalizedDate = null;\n\n  if (rawDate) {\n    const parsed = new Date(rawDate);\n\n    if (!isNaN(parsed.getTime())) {\n      normalizedDate = parsed.toISOString();\n    } else {\n      normalizedDate = String(rawDate);\n    }\n  }\n\n  return {\n    json: {\n      title: firstNonEmpty(\n        data.title,\n        data.headline,\n        data.name,\n        data.subject,\n        data.articleTitle\n      ),\n\n      content: firstNonEmpty(\n        data.content,\n        data['content:encoded'],\n        data.description,\n        data.summary,\n        data.contentSnippet,\n        data.excerpt,\n        data.body,\n        data.text,\n        data.article,\n        data.story,\n        data.fullText,\n        data.message,\n        data.caption\n      ),\n\n      link: firstNonEmpty(\n        data.link,\n        data.url,\n        data.guid,\n        data.id,\n        data['rdf:about'],\n        data.permalink,\n        data.canonicalUrl\n      ),\n\n      date: normalizedDate\n    }\n  };\n});"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -1088,
+        -3120
+      ],
+      "id": "a4537034-e1c5-467d-910e-b8adb16aae42",
+      "name": "Code in JavaScript15"
+    },
+    {
+      "parameters": {
+        "jsCode": "return items.map(item => {\n  const data = item.json || {};\n\n  const firstNonEmpty = (...values) => {\n    for (const value of values) {\n      if (\n        value !== undefined &&\n        value !== null &&\n        String(value).trim() !== ''\n      ) {\n        return value;\n      }\n    }\n    return null;\n  };\n\n  const rawDate = firstNonEmpty(\n    data.isoDate,\n    data.pubDate,\n    data.publishedAt,\n    data.published_at,\n    data.datePublished,\n    data.publishDate,\n    data.published,\n    data.createdAt,\n    data.created_at,\n    data.updatedAt,\n    data.updated_at,\n    data.date,\n    data.timestamp\n  );\n\n  let normalizedDate = null;\n\n  if (rawDate) {\n    const parsed = new Date(rawDate);\n\n    if (!isNaN(parsed.getTime())) {\n      normalizedDate = parsed.toISOString();\n    } else {\n      normalizedDate = String(rawDate);\n    }\n  }\n\n  return {\n    json: {\n      title: firstNonEmpty(\n        data.title,\n        data.headline,\n        data.name,\n        data.subject,\n        data.articleTitle\n      ),\n\n      content: firstNonEmpty(\n        data.content,\n        data['content:encoded'],\n        data.description,\n        data.summary,\n        data.contentSnippet,\n        data.excerpt,\n        data.body,\n        data.text,\n        data.article,\n        data.story,\n        data.fullText,\n        data.message,\n        data.caption\n      ),\n\n      link: firstNonEmpty(\n        data.link,\n        data.url,\n        data.guid,\n        data.id,\n        data['rdf:about'],\n        data.permalink,\n        data.canonicalUrl\n      ),\n\n      date: normalizedDate\n    }\n  };\n});"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -1088,
+        -2928
+      ],
+      "id": "9204227f-a82f-4587-bf0e-172fca1e02cf",
+      "name": "Code in JavaScript16"
+    },
+    {
+      "parameters": {
+        "jsCode": "return items.map(item => {\n  const data = item.json || {};\n\n  const firstNonEmpty = (...values) => {\n    for (const value of values) {\n      if (\n        value !== undefined &&\n        value !== null &&\n        String(value).trim() !== ''\n      ) {\n        return value;\n      }\n    }\n    return null;\n  };\n\n  const rawDate = firstNonEmpty(\n    data.isoDate,\n    data.pubDate,\n    data.publishedAt,\n    data.published_at,\n    data.datePublished,\n    data.publishDate,\n    data.published,\n    data.createdAt,\n    data.created_at,\n    data.updatedAt,\n    data.updated_at,\n    data.date,\n    data.timestamp\n  );\n\n  let normalizedDate = null;\n\n  if (rawDate) {\n    const parsed = new Date(rawDate);\n\n    if (!isNaN(parsed.getTime())) {\n      normalizedDate = parsed.toISOString();\n    } else {\n      normalizedDate = String(rawDate);\n    }\n  }\n\n  return {\n    json: {\n      title: firstNonEmpty(\n        data.title,\n        data.headline,\n        data.name,\n        data.subject,\n        data.articleTitle\n      ),\n\n      content: firstNonEmpty(\n        data.content,\n        data['content:encoded'],\n        data.description,\n        data.summary,\n        data.contentSnippet,\n        data.excerpt,\n        data.body,\n        data.text,\n        data.article,\n        data.story,\n        data.fullText,\n        data.message,\n        data.caption\n      ),\n\n      link: firstNonEmpty(\n        data.link,\n        data.url,\n        data.guid,\n        data.id,\n        data['rdf:about'],\n        data.permalink,\n        data.canonicalUrl\n      ),\n\n      date: normalizedDate\n    }\n  };\n});"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -1088,
+        -2160
+      ],
+      "id": "e2dcae5d-65fc-4bea-be2b-579bd87126cb",
+      "name": "Code in JavaScript17"
+    },
+    {
+      "parameters": {
+        "jsCode": "return items.map(item => {\n  const data = item.json || {};\n\n  const firstNonEmpty = (...values) => {\n    for (const value of values) {\n      if (\n        value !== undefined &&\n        value !== null &&\n        String(value).trim() !== ''\n      ) {\n        return value;\n      }\n    }\n    return null;\n  };\n\n  const rawDate = firstNonEmpty(\n    data.isoDate,\n    data.pubDate,\n    data.publishedAt,\n    data.published_at,\n    data.datePublished,\n    data.publishDate,\n    data.published,\n    data.createdAt,\n    data.created_at,\n    data.updatedAt,\n    data.updated_at,\n    data.date,\n    data.timestamp\n  );\n\n  let normalizedDate = null;\n\n  if (rawDate) {\n    const parsed = new Date(rawDate);\n\n    if (!isNaN(parsed.getTime())) {\n      normalizedDate = parsed.toISOString();\n    } else {\n      normalizedDate = String(rawDate);\n    }\n  }\n\n  return {\n    json: {\n      title: firstNonEmpty(\n        data.title,\n        data.headline,\n        data.name,\n        data.subject,\n        data.articleTitle\n      ),\n\n      content: firstNonEmpty(\n        data.content,\n        data['content:encoded'],\n        data.description,\n        data.summary,\n        data.contentSnippet,\n        data.excerpt,\n        data.body,\n        data.text,\n        data.article,\n        data.story,\n        data.fullText,\n        data.message,\n        data.caption\n      ),\n\n      link: firstNonEmpty(\n        data.link,\n        data.url,\n        data.guid,\n        data.id,\n        data['rdf:about'],\n        data.permalink,\n        data.canonicalUrl\n      ),\n\n      date: normalizedDate\n    }\n  };\n});"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -1088,
+        -2352
+      ],
+      "id": "59bf8d9b-6b8d-4984-a172-1764a7c806cf",
+      "name": "Code in JavaScript18"
+    },
+    {
+      "parameters": {
+        "jsCode": "return items.map(item => {\n  const data = item.json || {};\n\n  const firstNonEmpty = (...values) => {\n    for (const value of values) {\n      if (\n        value !== undefined &&\n        value !== null &&\n        String(value).trim() !== ''\n      ) {\n        return value;\n      }\n    }\n    return null;\n  };\n\n  const rawDate = firstNonEmpty(\n    data.isoDate,\n    data.pubDate,\n    data.publishedAt,\n    data.published_at,\n    data.datePublished,\n    data.publishDate,\n    data.published,\n    data.createdAt,\n    data.created_at,\n    data.updatedAt,\n    data.updated_at,\n    data.date,\n    data.timestamp\n  );\n\n  let normalizedDate = null;\n\n  if (rawDate) {\n    const parsed = new Date(rawDate);\n\n    if (!isNaN(parsed.getTime())) {\n      normalizedDate = parsed.toISOString();\n    } else {\n      normalizedDate = String(rawDate);\n    }\n  }\n\n  return {\n    json: {\n      title: firstNonEmpty(\n        data.title,\n        data.headline,\n        data.name,\n        data.subject,\n        data.articleTitle\n      ),\n\n      content: firstNonEmpty(\n        data.content,\n        data['content:encoded'],\n        data.description,\n        data.summary,\n        data.contentSnippet,\n        data.excerpt,\n        data.body,\n        data.text,\n        data.article,\n        data.story,\n        data.fullText,\n        data.message,\n        data.caption\n      ),\n\n      link: firstNonEmpty(\n        data.link,\n        data.url,\n        data.guid,\n        data.id,\n        data['rdf:about'],\n        data.permalink,\n        data.canonicalUrl\n      ),\n\n      date: normalizedDate\n    }\n  };\n});"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -1088,
+        -3312
+      ],
+      "id": "6e03e75c-2d2e-4742-901a-19ac1553c848",
+      "name": "Code in JavaScript19"
+    },
+    {
+      "parameters": {
+        "jsCode": "return items.map(item => {\n  const data = item.json || {};\n\n  const firstNonEmpty = (...values) => {\n    for (const value of values) {\n      if (\n        value !== undefined &&\n        value !== null &&\n        String(value).trim() !== ''\n      ) {\n        return value;\n      }\n    }\n    return null;\n  };\n\n  const rawDate = firstNonEmpty(\n    data.isoDate,\n    data.pubDate,\n    data.publishedAt,\n    data.published_at,\n    data.datePublished,\n    data.publishDate,\n    data.published,\n    data.createdAt,\n    data.created_at,\n    data.updatedAt,\n    data.updated_at,\n    data.date,\n    data.timestamp\n  );\n\n  let normalizedDate = null;\n\n  if (rawDate) {\n    const parsed = new Date(rawDate);\n\n    if (!isNaN(parsed.getTime())) {\n      normalizedDate = parsed.toISOString();\n    } else {\n      normalizedDate = String(rawDate);\n    }\n  }\n\n  return {\n    json: {\n      title: firstNonEmpty(\n        data.title,\n        data.headline,\n        data.name,\n        data.subject,\n        data.articleTitle\n      ),\n\n      content: firstNonEmpty(\n        data.content,\n        data['content:encoded'],\n        data.description,\n        data.summary,\n        data.contentSnippet,\n        data.excerpt,\n        data.body,\n        data.text,\n        data.article,\n        data.story,\n        data.fullText,\n        data.message,\n        data.caption\n      ),\n\n      link: firstNonEmpty(\n        data.link,\n        data.url,\n        data.guid,\n        data.id,\n        data['rdf:about'],\n        data.permalink,\n        data.canonicalUrl\n      ),\n\n      date: normalizedDate\n    }\n  };\n});"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -1088,
+        -2544
+      ],
+      "id": "3b42c340-5ae8-4aeb-96a6-05a594780f86",
+      "name": "Code in JavaScript20"
+    },
+    {
+      "parameters": {
+        "jsCode": "return items.map(item => {\n  const data = item.json || {};\n\n  const firstNonEmpty = (...values) => {\n    for (const value of values) {\n      if (\n        value !== undefined &&\n        value !== null &&\n        String(value).trim() !== ''\n      ) {\n        return value;\n      }\n    }\n    return null;\n  };\n\n  const rawDate = firstNonEmpty(\n    data.isoDate,\n    data.pubDate,\n    data.publishedAt,\n    data.published_at,\n    data.datePublished,\n    data.publishDate,\n    data.published,\n    data.createdAt,\n    data.created_at,\n    data.updatedAt,\n    data.updated_at,\n    data.date,\n    data.timestamp\n  );\n\n  let normalizedDate = null;\n\n  if (rawDate) {\n    const parsed = new Date(rawDate);\n\n    if (!isNaN(parsed.getTime())) {\n      normalizedDate = parsed.toISOString();\n    } else {\n      normalizedDate = String(rawDate);\n    }\n  }\n\n  return {\n    json: {\n      title: firstNonEmpty(\n        data.title,\n        data.headline,\n        data.name,\n        data.subject,\n        data.articleTitle\n      ),\n\n      content: firstNonEmpty(\n        data.content,\n        data['content:encoded'],\n        data.description,\n        data.summary,\n        data.contentSnippet,\n        data.excerpt,\n        data.body,\n        data.text,\n        data.article,\n        data.story,\n        data.fullText,\n        data.message,\n        data.caption\n      ),\n\n      link: firstNonEmpty(\n        data.link,\n        data.url,\n        data.guid,\n        data.id,\n        data['rdf:about'],\n        data.permalink,\n        data.canonicalUrl\n      ),\n\n      date: normalizedDate\n    }\n  };\n});"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -1088,
+        -2736
+      ],
+      "id": "5ebf18e6-eb17-41ee-ad99-2ca2bb0326e0",
+      "name": "Code in JavaScript21"
+    },
+    {
+      "parameters": {
+        "numberInputs": 4
+      },
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.2,
+      "position": [
+        -1088,
+        -4256
+      ],
+      "id": "7904d4d9-fe0c-4260-ade3-6c297b0f3011",
+      "name": "01_BREAKING_NEWS2"
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "minutes"
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.3,
+      "position": [
+        -1760,
+        -2096
+      ],
+      "id": "7ed0ad69-a3be-476e-a56e-8fe7f892aa41",
+      "name": "5min1"
+    },
+    {
+      "parameters": {
+        "numberInputs": 10
+      },
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.2,
+      "position": [
+        -864,
+        -3136
+      ],
+      "id": "071810fc-7cd3-4060-b847-568c61c48ad1",
+      "name": "01_BREAKING_NEWS1"
+    },
+    {
+      "parameters": {
+        "numberInputs": 3
+      },
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.2,
+      "position": [
+        -640,
+        -3600
+      ],
+      "id": "0a41311d-9260-4b79-b7ac-79e6247336ad",
+      "name": "01_BREAKING_NEWS"
+    },
+    {
+      "parameters": {
+        "numberInputs": 7
+      },
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.2,
+      "position": [
+        -416,
+        -2992
+      ],
+      "id": "f492dc05-9bc8-4445-a04e-7240d66ff1b3",
+      "name": "feeds merge"
+    },
+    {
+      "parameters": {
+        "jsCode": "return items.map(item => {\n  const data = item.json || {};\n\n  const firstNonEmpty = (...values) => {\n    for (const value of values) {\n      if (\n        value !== undefined &&\n        value !== null &&\n        String(value).trim() !== ''\n      ) {\n        return value;\n      }\n    }\n    return null;\n  };\n\n  const rawDate = firstNonEmpty(\n    data.isoDate,\n    data.pubDate,\n    data.publishedAt,\n    data.published_at,\n    data.datePublished,\n    data.publishDate,\n    data.published,\n    data.createdAt,\n    data.created_at,\n    data.updatedAt,\n    data.updated_at,\n    data.date,\n    data.timestamp\n  );\n\n  let normalizedDate = null;\n\n  if (rawDate) {\n    const parsed = new Date(rawDate);\n\n    if (!isNaN(parsed.getTime())) {\n      normalizedDate = parsed.toISOString();\n    } else {\n      normalizedDate = String(rawDate);\n    }\n  }\n\n  return {\n    json: {\n      title: firstNonEmpty(\n        data.title,\n        data.headline,\n        data.name,\n        data.subject,\n        data.articleTitle\n      ),\n\n      content: firstNonEmpty(\n        data.content,\n        data['content:encoded'],\n        data.description,\n        data.summary,\n        data.contentSnippet,\n        data.excerpt,\n        data.body,\n        data.text,\n        data.article,\n        data.story,\n        data.fullText,\n        data.message,\n        data.caption\n      ),\n\n      link: firstNonEmpty(\n        data.link,\n        data.url,\n        data.guid,\n        data.id,\n        data['rdf:about'],\n        data.permalink,\n        data.canonicalUrl\n      ),\n\n      date: normalizedDate\n    }\n  };\n});"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -1312,
+        -4272
+      ],
+      "id": "a9630f1e-4ef6-4f95-a67d-2087346290b7",
+      "name": "Code in JavaScript22"
+    },
+    {
+      "parameters": {
+        "jsCode": "return items.map(item => {\n  const data = item.json || {};\n\n  const firstNonEmpty = (...values) => {\n    for (const value of values) {\n      if (\n        value !== undefined &&\n        value !== null &&\n        String(value).trim() !== ''\n      ) {\n        return value;\n      }\n    }\n    return null;\n  };\n\n  const rawDate = firstNonEmpty(\n    data.isoDate,\n    data.pubDate,\n    data.publishedAt,\n    data.published_at,\n    data.datePublished,\n    data.publishDate,\n    data.published,\n    data.createdAt,\n    data.created_at,\n    data.updatedAt,\n    data.updated_at,\n    data.date,\n    data.timestamp\n  );\n\n  let normalizedDate = null;\n\n  if (rawDate) {\n    const parsed = new Date(rawDate);\n\n    if (!isNaN(parsed.getTime())) {\n      normalizedDate = parsed.toISOString();\n    } else {\n      normalizedDate = String(rawDate);\n    }\n  }\n\n  return {\n    json: {\n      title: firstNonEmpty(\n        data.title,\n        data.headline,\n        data.name,\n        data.subject,\n        data.articleTitle\n      ),\n\n      content: firstNonEmpty(\n        data.content,\n        data['content:encoded'],\n        data.description,\n        data.summary,\n        data.contentSnippet,\n        data.excerpt,\n        data.body,\n        data.text,\n        data.article,\n        data.story,\n        data.fullText,\n        data.message,\n        data.caption\n      ),\n\n      link: firstNonEmpty(\n        data.link,\n        data.url,\n        data.guid,\n        data.id,\n        data['rdf:about'],\n        data.permalink,\n        data.canonicalUrl\n      ),\n\n      date: normalizedDate\n    }\n  };\n});"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -1312,
+        -4080
+      ],
+      "id": "7e191b5c-5dc7-446a-a735-a716c7100e27",
+      "name": "Code in JavaScript23"
+    },
+    {
+      "parameters": {
+        "jsCode": "const NOISE_TERMS = {\n  // Travel / tourism\n  \"travel\": 10,\n  \"traveller\": 10,\n  \"travellers\": 10,\n  \"tourism\": 12,\n  \"tourist\": 12,\n  \"visa\": 10,\n  \"passport\": 8,\n  \"hotel\": 8,\n  \"resort\": 8,\n  \"flight\": 8,\n  \"airline\": 8,\n  \"destination\": 8,\n  \"trip\": 6,\n  \"vacation\": 8,\n  \"holiday\": 8,\n\n  // Consumer / commerce / soft business\n  \"shopping\": 10,\n  \"sale\": 10,\n  \"discount\": 10,\n  \"offer\": 10,\n  \"deal\": 4,\n  \"coupon\": 10,\n  \"review\": 10,\n  \"gadget\": 8,\n\n  // Entertainment\n  \"movie\": 15,\n  \"film\": 15,\n  \"actor\": 15,\n  \"actress\": 15,\n  \"celebrity\": 15,\n  \"music\": 15,\n  \"bollywood\": 20,\n  \"entertainment\": 15,\n  \"tv\": 10,\n\n  // Lifestyle / human-interest\n  \"fashion\": 15,\n  \"beauty\": 15,\n  \"fitness\": 12,\n  \"wellness\": 12,\n  \"recipe\": 15,\n  \"food\": 8,\n  \"parenting\": 15,\n  \"kids\": 15,\n\n  // Sports\n  \"sports\": 12,\n  \"cricket\": 20,\n  \"ipl\": 20,\n  \"football\": 18,\n  \"match\": 10,\n  \"tournament\": 10,\n\n  // SEO / clickbait\n  \"what indian travellers should know\": 30,\n  \"what you should know\": 20,\n  \"all you need to know\": 20,\n  \"top 10\": 20,\n  \"best places\": 20,\n  \"how to\": 12,\n  \"guide\": 12,\n  \"tips\": 10,\n  \"explained\": 4,\n  \"viral\": 15,\n  \"trending\": 10,\n\n  // Astrology / pseudo-news\n  \"horoscope\": 30,\n  \"astrology\": 30\n};\n\nfunction getText(item) {\n  return `${item.json.title || \"\"} ${item.json.content || \"\"}`.toLowerCase();\n}\n\nfunction countNoiseScore(text) {\n  let noiseScore = 0;\n\n  for (const [term, weight] of Object.entries(NOISE_TERMS)) {\n    if (text.includes(term)) {\n      noiseScore += weight;\n    }\n  }\n\n  return noiseScore;\n}\n\nreturn items\n  .map((item) => {\n    const text = getText(item);\n    const noiseScore = countNoiseScore(text);\n\n    item.json.noiseScore = noiseScore;\n    item.json.signalScore =\n      (item.json.indiaScore || 0) +\n      (item.json.strategicScore || 0) -\n      noiseScore;\n\n    return item;\n  })\n  .filter((item) => {\n    const noiseScore = item.json.noiseScore || 0;\n    const strategicScore = item.json.strategicScore || 0;\n\n    // Keep highly strategic items unless they are clearly soft/noisy\n    if (strategicScore >= 15 && noiseScore < 35) {\n      return true;\n    }\n\n    // Normal gate for the rest\n    return noiseScore < 15;\n  });"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1152,
+        -2912
+      ],
+      "id": "d4b65967-9b43-4859-a5fd-f1e25133b6fe",
+      "name": "filter3 - Hard “noise\""
+    },
+    {
+      "parameters": {
+        "jsCode": "const MAX_AGE_HOURS = 24;\nconst FUTURE_TOLERANCE_MINUTES = 30;\n\nconst now = Date.now();\n\nfunction parseDate(item) {\n  const candidates = [\n    item.date,\n    item.isoDate,\n    item.pubDate,\n    item.publishedAt,\n    item.published_at,\n    item.createdAt,\n    item.updatedAt,\n    item.timestamp,\n  ];\n\n  for (const value of candidates) {\n    if (!value) continue;\n\n    const d = new Date(value);\n\n    if (!isNaN(d.getTime())) {\n      return d;\n    }\n  }\n\n  return null;\n}\n\nreturn items.filter(item => {\n\n  const date = parseDate(item.json);\n\n  if (!date) {\n    return false;\n  }\n\n  const ageHours =\n    (now - date.getTime()) /\n    (1000 * 60 * 60);\n\n  const futureHours =\n    (date.getTime() - now) /\n    (1000 * 60 * 60);\n\n  // reject articles too far in future\n  if (\n    futureHours >\n    (FUTURE_TOLERANCE_MINUTES / 60)\n  ) {\n    return false;\n  }\n\n  // reject old articles\n  if (ageHours > MAX_AGE_HOURS) {\n    return false;\n  }\n\n  item.json.articleAgeHours =\n    Math.round(ageHours * 100) / 100;\n\n  return true;\n});"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        32,
+        -2912
+      ],
+      "id": "5d5e8b4b-ab88-40df-98f9-9c4aaf29ab40",
+      "name": "filter1 - 24-hour date"
+    },
+    {
+      "parameters": {
+        "jsCode": "const MIN_TITLE_LENGTH = 25;\nconst MIN_CONTENT_LENGTH = 120;\nconst MIN_CONTENT_WORDS = 20;\n\nconst BOILERPLATE_PHRASES = [\n  \"read more\",\n  \"click here\",\n  \"subscribe now\",\n  \"subscribe to read\",\n  \"sign up\",\n  \"watch here\",\n  \"follow us\",\n  \"follow for more\",\n  \"stay updated\",\n  \"download app\",\n  \"share this article\",\n  \"for more updates\",\n  \"also read\",\n  \"advertisement\",\n  \"sponsored\",\n];\n\nfunction normalizeText(value) {\n  return String(value || \"\")\n    .replace(/<[^>]*>/g, \" \")\n    .replace(/&nbsp;|&#160;/g, \" \")\n    .replace(/\\s+/g, \" \")\n    .trim();\n}\n\nfunction wordCount(text) {\n  const words = normalizeText(text).split(\" \").filter(Boolean);\n  return words.length;\n}\n\nfunction looksLikeBoilerplate(text) {\n  const t = normalizeText(text).toLowerCase();\n  return BOILERPLATE_PHRASES.some((p) => t.includes(p));\n}\n\nfunction hasEnoughUniqueWords(title, content) {\n  const tWords = new Set(\n    normalizeText(title)\n      .toLowerCase()\n      .split(\" \")\n      .filter((w) => w.length > 2)\n  );\n\n  const cWords = new Set(\n    normalizeText(content)\n      .toLowerCase()\n      .split(\" \")\n      .filter((w) => w.length > 2)\n  );\n\n  if (tWords.size === 0 || cWords.size === 0) return false;\n\n  let overlap = 0;\n  for (const w of tWords) {\n    if (cWords.has(w)) overlap++;\n  }\n\n  // Require at least some overlap, but not too much repetition-only content\n  return overlap >= 1;\n}\n\nreturn items.filter((item) => {\n  const title = normalizeText(item.json.title);\n  const content = normalizeText(item.json.content);\n  const link = normalizeText(item.json.link);\n\n  if (!title || !content || !link) return false;\n\n  if (title.length < MIN_TITLE_LENGTH) return false;\n  if (content.length < MIN_CONTENT_LENGTH) return false;\n  if (wordCount(content) < MIN_CONTENT_WORDS) return false;\n\n  if (looksLikeBoilerplate(title) || looksLikeBoilerplate(content)) return false;\n\n  if (!hasEnoughUniqueWords(title, content)) return false;\n\n  return true;\n});"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1376,
+        -2912
+      ],
+      "id": "e8603a6f-f02e-492d-b25d-8fc5e275d8bd",
+      "name": "filter6 - Content quality"
+    },
+    {
+      "parameters": {
+        "numberInputs": 5
+      },
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.2,
+      "position": [
+        -1088,
+        -1712
+      ],
+      "id": "2677db2a-2d35-4381-bea0-824cb437716a",
+      "name": "02_INTERNATIONAL"
+    },
+    {
+      "parameters": {
+        "jsCode": "const INDIA_TERMS = {\n  \"india\": 5,\n  \"indian\": 5,\n  \"new delhi\": 5,\n  \"delhi\": 4,\n\n  \"modi\": 6,\n  \"jaishankar\": 6,\n  \"rajnath\": 6,\n\n  \"indian army\": 8,\n  \"indian navy\": 8,\n  \"indian air force\": 8,\n\n  \"drdo\": 8,\n  \"isro\": 7,\n  \"raw\": 8,\n  \"ntro\": 8,\n\n  \"pakistan\": 4,\n  \"china\": 4,\n  \"bangladesh\": 3,\n  \"myanmar\": 3,\n  \"sri lanka\": 3,\n  \"nepal\": 3,\n  \"bhutan\": 3,\n  \"maldives\": 3,\n  \"afghanistan\": 3,\n\n  \"indo-pacific\": 5,\n  \"indian ocean\": 5,\n  \"quad\": 5,\n  \"brics\": 4,\n  \"sco\": 4\n};\n\nfunction getText(item) {\n  return `${item.json.title || \"\"} ${item.json.content || \"\"}`\n    .toLowerCase();\n}\n\nreturn items.map(item => {\n\n  const text = getText(item);\n\n  let indiaScore = 0;\n\n  for (const [term, weight] of Object.entries(INDIA_TERMS)) {\n    if (text.includes(term)) {\n      indiaScore += weight;\n    }\n  }\n\n  item.json.indiaScore = indiaScore;\n\n  return item;\n});"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        480,
+        -2912
+      ],
+      "id": "ceb28577-194c-438a-a33e-7606251eef6d",
+      "name": "Filter 2A — India Relevance Score"
+    },
+    {
+      "parameters": {
+        "jsCode": "const STRATEGIC_TERMS = {\n\n  \"defence\": 8,\n  \"defense\": 8,\n  \"military\": 8,\n  \"armed forces\": 8,\n\n  \"army\": 7,\n  \"navy\": 7,\n  \"air force\": 7,\n\n  \"missile\": 9,\n  \"drone\": 8,\n  \"satellite\": 8,\n\n  \"terror\": 10,\n  \"terrorism\": 10,\n  \"terrorist\": 10,\n\n  \"insurgency\": 9,\n  \"militant\": 9,\n  \"extremist\": 9,\n\n  \"border\": 7,\n  \"ceasefire\": 7,\n\n  \"geopolitics\": 8,\n  \"diplomacy\": 7,\n  \"foreign policy\": 8,\n\n  \"security\": 7,\n  \"national security\": 10,\n\n  \"cyber\": 8,\n  \"cybersecurity\": 8,\n  \"espionage\": 10,\n\n  \"sanction\": 6,\n  \"summit\": 5,\n  \"agreement\": 4,\n  \"treaty\": 6,\n\n  \"war\": 9,\n  \"conflict\": 7,\n  \"strike\": 8,\n  \"attack\": 6\n};\n\nfunction getText(item) {\n  return `${item.json.title || \"\"} ${item.json.content || \"\"}`\n    .toLowerCase();\n}\n\nreturn items.map(item => {\n\n  const text = getText(item);\n\n  let strategicScore = 0;\n\n  for (const [term, weight] of Object.entries(STRATEGIC_TERMS)) {\n    if (text.includes(term)) {\n      strategicScore += weight;\n    }\n  }\n\n  item.json.strategicScore = strategicScore;\n\n  return item;\n});"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        704,
+        -2912
+      ],
+      "id": "4fc990ba-3046-47c1-bd01-436a4d6b13d9",
+      "name": "Filter 2B — Strategic Intelligence Score"
+    },
+    {
+      "parameters": {
+        "jsCode": "return items.filter(item => {\n\n  const india = item.json.indiaScore || 0;\n  const strategic = item.json.strategicScore || 0;\n\n  return (\n    india >= 5 &&\n    strategic >= 8\n  );\n});"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        928,
+        -2912
+      ],
+      "id": "462a23aa-6fa8-4416-bd5b-4101c1c22b2f",
+      "name": "Filter 2C — Hard Filter"
+    },
+    {
+      "parameters": {
+        "jsCode": "const JUNK = [\n  \"cricket\",\n  \"ipl\",\n  \"bollywood\",\n  \"movie\",\n  \"actor\",\n  \"actress\",\n  \"celebrity\",\n  \"travel\",\n  \"tourism\",\n  \"fashion\",\n  \"lifestyle\",\n  \"recipe\",\n  \"health tips\",\n  \"horoscope\",\n  \"astrology\",\n  \"entertainment\",\n  \"viral\",\n  \"trending\",\n  \"wedding\"\n];\n\nreturn items.filter(item => {\n\n  const text =\n    `${item.json.title || \"\"} ${item.json.content || \"\"}`\n    .toLowerCase();\n\n  return !JUNK.some(term => text.includes(term));\n});"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        256,
+        -2912
+      ],
+      "id": "cea96d97-d358-4fb1-90ef-f0c8c630fdae",
+      "name": "Filter 2.0 — Garbage Filter"
+    },
+    {
+      "parameters": {
+        "jsCode": "const seen = new Set();\n\nreturn items.filter(item => {\n\n  const title = (item.json.title || \"\")\n    .toLowerCase()\n    .trim();\n\n  const link = (item.json.link || \"\")\n    .split(\"?\")[0]\n    .trim();\n\n  const key = `${title}|${link}`;\n\n  if (seen.has(key)) {\n    return false;\n  }\n\n  seen.add(key);\n\n  return true;\n});"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -192,
+        -2912
+      ],
+      "id": "9bc898a5-fdd0-4d15-8a38-eef941e9da10",
+      "name": "FilterA — Exact Dedup"
+    },
+    {
+      "parameters": {
+        "jsCode": "const seen = new Set();\n\nfunction normalizeText(value) {\n  return String(value || \"\")\n    .replace(/<[^>]*>/g, \" \")\n    .replace(/&nbsp;|&#160;/g, \" \")\n    .replace(/\\s+/g, \" \")\n    .trim()\n    .toLowerCase();\n}\n\nfunction normalizeUrl(url) {\n  try {\n    const u = new URL(String(url || \"\").trim());\n    u.hash = \"\";\n    u.search = \"\";\n    return u.toString().replace(/\\/$/, \"\");\n  } catch {\n    return String(url || \"\").trim().replace(/\\?.*$/, \"\").replace(/\\/$/, \"\");\n  }\n}\n\nfunction getText(item) {\n  return normalizeText(`${item.json.title || \"\"} ${item.json.content || \"\"}`);\n}\n\nfunction countMatches(text, terms) {\n  let count = 0;\n  for (const term of terms) {\n    if (text.includes(term)) count++;\n  }\n  return count;\n}\n\nconst HARD_BLOCK = [\n  \"horoscope\",\n  \"astrology\",\n  \"celebrity\",\n  \"bollywood\",\n  \"movie\",\n  \"film\",\n  \"music\",\n  \"fashion\",\n  \"beauty\",\n  \"lifestyle\",\n  \"fitness\",\n  \"wellness\",\n  \"recipe\",\n  \"parenting\",\n  \"kids\",\n  \"cricket\",\n  \"ipl\",\n  \"football\",\n  \"sports\",\n  \"travel guide\",\n  \"tourism\",\n  \"tourist\",\n  \"visa guide\",\n  \"hotel\",\n  \"resort\",\n  \"flight\",\n  \"airline\",\n  \"destination\",\n  \"shopping\",\n  \"sale\",\n  \"discount\",\n  \"gadget review\",\n  \"working life\",\n  \"how to\",\n  \"what indian travellers should know\"\n];\n\nconst SOFT_BLOCK = [\n  \"education\",\n  \"school\",\n  \"college\",\n  \"university\",\n  \"exam\",\n  \"tender\",\n  \"admission\",\n  \"results\",\n  \"campus\",\n  \"student life\",\n  \"offbeat\",\n  \"viral\",\n  \"trending\",\n  \"human interest\",\n  \"opinion\",\n  \"lifestyle\"\n];\n\nconst STRATEGIC_TERMS = [\n  \"defense\", \"defence\", \"military\", \"security\", \"intelligence\",\n  \"terror\", \"terrorism\", \"terrorist\", \"insurgency\", \"militant\",\n  \"border\", \"ceasefire\", \"sanction\", \"sanctions\", \"strike\", \"attack\",\n  \"missile\", \"drone\", \"war\", \"conflict\", \"navy\", \"army\", \"air force\",\n  \"cyber\", \"cybersecurity\", \"espionage\", \"diplomacy\", \"foreign policy\",\n  \"foreign affairs\", \"geopolitics\", \"summit\", \"treaty\", \"agreement\",\n  \"quad\", \"brics\", \"indo-pacific\", \"indian ocean\", \"hormuz\",\n  \"strait of hormuz\", \"brahmos\", \"aukus\", \"pakistan\", \"china\",\n  \"russia\", \"iran\", \"israel\", \"myanmar\", \"afghanistan\",\n  \"bangladesh\", \"sri lanka\", \"nepal\", \"maldives\", \"uae\"\n];\n\nconst INDIA_TERMS = [\n  \"india\", \"indian\", \"new delhi\", \"delhi\",\n  \"modi\", \"jaishankar\", \"rajnath\",\n  \"mea\", \"ministry of external affairs\",\n  \"indian army\", \"indian navy\", \"indian air force\",\n  \"drdo\", \"isro\", \"raw\", \"ntro\"\n];\n\nconst MAX_AGE_HOURS = 24;\nconst MIN_TITLE_LENGTH = 25;\nconst MIN_CONTENT_LENGTH = 120;\n\nreturn items\n  .filter((item) => {\n    const title = normalizeText(item.json.title);\n    const content = normalizeText(item.json.content);\n    const link = normalizeUrl(item.json.link);\n\n    if (!title || !content || !link) return false;\n    if (title.length < MIN_TITLE_LENGTH) return false;\n    if (content.length < MIN_CONTENT_LENGTH) return false;\n\n    const ageHours = Number(item.json.articleAgeHours);\n    if (!Number.isFinite(ageHours) || ageHours > MAX_AGE_HOURS) return false;\n\n    const key = `${title}|${link}`;\n    if (seen.has(key)) return false;\n    seen.add(key);\n\n    const text = `${title} ${content}`;\n\n    const hardBlockHits = countMatches(text, HARD_BLOCK);\n    const softBlockHits = countMatches(text, SOFT_BLOCK);\n    const strategicHits = countMatches(text, STRATEGIC_TERMS);\n    const indiaHits = countMatches(text, INDIA_TERMS);\n\n    const score = Number(item.json.signalScore || 0);\n    const strategicScore = Number(item.json.strategicScore || 0);\n    const indiaScore = Number(item.json.indiaScore || 0);\n    const noiseScore = Number(item.json.noiseScore || 0);\n\n    const clearlySoft = hardBlockHits > 0 || softBlockHits >= 2;\n    const clearlyStrategic = strategicHits >= 2 || strategicScore >= 12 || score >= 15;\n    const clearlyIndiaRelevant = indiaHits >= 1 && indiaScore >= 5;\n\n    if (clearlySoft && !clearlyStrategic) return false;\n\n    if (title.includes(\"student\") && (title.includes(\"claim\") || title.includes(\"tender\") || title.includes(\"exam\"))) {\n      if (!clearlyStrategic) return false;\n    }\n\n    if (noiseScore >= 15 && !clearlyStrategic) return false;\n\n    return clearlyStrategic || clearlyIndiaRelevant;\n  })\n  .map((item) => ({\n    json: {\n      title: item.json.title,\n      content: item.json.content,\n      link: item.json.link,\n      date: item.json.date,\n      articleAgeHours: item.json.articleAgeHours,\n      indiaScore: item.json.indiaScore || 0,\n      strategicScore: item.json.strategicScore || 0,\n      noiseScore: item.json.noiseScore || 0,\n      signalScore: item.json.signalScore || 0,\n    },\n  }));"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1600,
+        -2912
+      ],
+      "id": "5fb51af1-e0ec-4d72-ad78-79346186e8d8",
+      "name": "final filter"
+    },
+    {
+      "parameters": {
+        "url": "https://www.google.co.in/alerts/feeds/07806644112968960405/11229646861396894652",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1.2,
+      "position": [
+        0,
+        0
+      ],
+      "id": "66962191-affd-4843-af70-7075ece6e522",
+      "name": "RSS Read6"
+    }
+  ],
+  "connections": {
+    "belingcat": {
+      "main": [
+        [
+          {
+            "node": "Code in JavaScript",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "nekie asia": {
+      "main": [
+        [
+          {
+            "node": "Code in JavaScript10",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "the diplomat": {
+      "main": [
+        [
+          {
+            "node": "Code in JavaScript1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "al jajera": {
+      "main": [
+        [
+          {
+            "node": "Code in JavaScript13",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "RSS Read": {
+      "main": [
+        [
+          {
+            "node": "Code in JavaScript14",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "bbc": {
+      "main": [
+        [
+          {
+            "node": "RSS Read",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "foreignpolicy": {
+      "main": [
+        [
+          {
+            "node": "Code in JavaScript11",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "foreignaffairs": {
+      "main": [
+        [
+          {
+            "node": "Code in JavaScript12",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "RSS Read1": {
+      "main": [
+        [
+          {
+            "node": "Code in JavaScript19",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "the hindu": {
+      "main": [
+        [
+          {
+            "node": "RSS Read1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "RSS Read2": {
+      "main": [
+        [
+          {
+            "node": "Code in JavaScript2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "india express": {
+      "main": [
+        [
+          {
+            "node": "RSS Read2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "DDNEWS_nationalFeeds": {
+      "main": [
+        [
+          {
+            "node": "Code in JavaScript20",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HindustanT_india": {
+      "main": [
+        [
+          {
+            "node": "Code in JavaScript17",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "zeenewsWorld": {
+      "main": [
+        [
+          {
+            "node": "Code in JavaScript22",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "indiatv": {
+      "main": [
+        [
+          {
+            "node": "Code in JavaScript23",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "theHackerNewsFeeds": {
+      "main": [
+        [
+          {
+            "node": "Code in JavaScript9",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IANS Get News": {
+      "main": [
+        [
+          {
+            "node": "Code in JavaScript18",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript": {
+      "main": [
+        [
+          {
+            "node": "05_OSINT_INVESTIGATIONS",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript1": {
+      "main": [
+        [
+          {
+            "node": "02_INTERNATIONAL",
+            "type": "main",
+            "index": 2
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript2": {
+      "main": [
+        [
+          {
+            "node": "01_BREAKING_NEWS1",
+            "type": "main",
+            "index": 2
+          }
+        ]
+      ]
+    },
+    "RSS Read3": {
+      "main": [
+        [
+          {
+            "node": "Code in JavaScript16",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "firstpost": {
+      "main": [
+        [
+          {
+            "node": "RSS Read3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "RSS Read4": {
+      "main": [
+        [
+          {
+            "node": "Code in JavaScript15",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "indiatoday": {
+      "main": [
+        [
+          {
+            "node": "RSS Read4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "RSS Read5": {
+      "main": [
+        [
+          {
+            "node": "Code in JavaScript21",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "ndtv": {
+      "main": [
+        [
+          {
+            "node": "RSS Read5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "breakingdefense": {
+      "main": [
+        [
+          {
+            "node": "Code in JavaScript5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "defensenews": {
+      "main": [
+        [
+          {
+            "node": "Code in JavaScript6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "warontherocks": {
+      "main": [
+        [
+          {
+            "node": "Code in JavaScript4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript3": {
+      "main": [
+        [
+          {
+            "node": "06_THINK_TANKS",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript4": {
+      "main": [
+        [
+          {
+            "node": "03_DEFENSE_SECURITY",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript5": {
+      "main": [
+        [
+          {
+            "node": "03_DEFENSE_SECURITY",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript6": {
+      "main": [
+        [
+          {
+            "node": "03_DEFENSE_SECURITY",
+            "type": "main",
+            "index": 2
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript7": {
+      "main": [
+        [
+          {
+            "node": "06_THINK_TANKS",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "longwarjournal": {
+      "main": [
+        [
+          {
+            "node": "Code in JavaScript8",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "04_TERRORISM_INSURGENCY": {
+      "main": [
+        [
+          {
+            "node": "feeds merge",
+            "type": "main",
+            "index": 5
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript8": {
+      "main": [
+        [
+          {
+            "node": "04_TERRORISM_INSURGENCY",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "06_THINK_TANKS": {
+      "main": [
+        [
+          {
+            "node": "feeds merge",
+            "type": "main",
+            "index": 3
+          }
+        ]
+      ]
+    },
+    "INTERNATIONAL atlanticcouncil": {
+      "main": [
+        [
+          {
+            "node": "Code in JavaScript7",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "INDIAN gatewayhouse": {
+      "main": [
+        [
+          {
+            "node": "Code in JavaScript3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "05_OSINT_INVESTIGATIONS": {
+      "main": [
+        [
+          {
+            "node": "feeds merge",
+            "type": "main",
+            "index": 2
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript9": {
+      "main": [
+        [
+          {
+            "node": "07_CYBERSECURITY",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "07_CYBERSECURITY": {
+      "main": [
+        [
+          {
+            "node": "feeds merge",
+            "type": "main",
+            "index": 6
+          }
+        ]
+      ]
+    },
+    "03_DEFENSE_SECURITY": {
+      "main": [
+        [
+          {
+            "node": "feeds merge",
+            "type": "main",
+            "index": 4
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript10": {
+      "main": [
+        [
+          {
+            "node": "02_INTERNATIONAL",
+            "type": "main",
+            "index": 3
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript11": {
+      "main": [
+        [
+          {
+            "node": "02_INTERNATIONAL",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript12": {
+      "main": [
+        [
+          {
+            "node": "02_INTERNATIONAL",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript13": {
+      "main": [
+        [
+          {
+            "node": "01_BREAKING_NEWS1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript14": {
+      "main": [
+        [
+          {
+            "node": "01_BREAKING_NEWS1",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript15": {
+      "main": [
+        [
+          {
+            "node": "01_BREAKING_NEWS1",
+            "type": "main",
+            "index": 4
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript16": {
+      "main": [
+        [
+          {
+            "node": "01_BREAKING_NEWS1",
+            "type": "main",
+            "index": 5
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript17": {
+      "main": [
+        [
+          {
+            "node": "01_BREAKING_NEWS1",
+            "type": "main",
+            "index": 9
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript18": {
+      "main": [
+        [
+          {
+            "node": "01_BREAKING_NEWS1",
+            "type": "main",
+            "index": 8
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript19": {
+      "main": [
+        [
+          {
+            "node": "01_BREAKING_NEWS1",
+            "type": "main",
+            "index": 3
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript20": {
+      "main": [
+        [
+          {
+            "node": "01_BREAKING_NEWS1",
+            "type": "main",
+            "index": 7
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript21": {
+      "main": [
+        [
+          {
+            "node": "01_BREAKING_NEWS1",
+            "type": "main",
+            "index": 6
+          }
+        ]
+      ]
+    },
+    "01_BREAKING_NEWS2": {
+      "main": [
+        [
+          {
+            "node": "01_BREAKING_NEWS",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "5min1": {
+      "main": [
+        [
+          {
+            "node": "al jajera",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "bbc",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "india express",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "the hindu",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "indiatoday",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "firstpost",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "ndtv",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "DDNEWS_nationalFeeds",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "IANS Get News",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "HindustanT_india",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "zeenewsWorld",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "indiatv",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "foreignaffairs",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "foreignpolicy",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "the diplomat",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "nekie asia",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "belingcat",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "INDIAN gatewayhouse",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "INTERNATIONAL atlanticcouncil",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "warontherocks",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "breakingdefense",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "defensenews",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "longwarjournal",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "theHackerNewsFeeds",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "01_BREAKING_NEWS1": {
+      "main": [
+        [
+          {
+            "node": "01_BREAKING_NEWS",
+            "type": "main",
+            "index": 2
+          }
+        ]
+      ]
+    },
+    "01_BREAKING_NEWS": {
+      "main": [
+        [
+          {
+            "node": "feeds merge",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "feeds merge": {
+      "main": [
+        [
+          {
+            "node": "FilterA — Exact Dedup",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript22": {
+      "main": [
+        [
+          {
+            "node": "01_BREAKING_NEWS2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript23": {
+      "main": [
+        [
+          {
+            "node": "01_BREAKING_NEWS2",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "filter3 - Hard “noise\"": {
+      "main": [
+        [
+          {
+            "node": "filter6 - Content quality",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "filter1 - 24-hour date": {
+      "main": [
+        [
+          {
+            "node": "Filter 2.0 — Garbage Filter",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "filter6 - Content quality": {
+      "main": [
+        [
+          {
+            "node": "final filter",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "02_INTERNATIONAL": {
+      "main": [
+        [
+          {
+            "node": "feeds merge",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Filter 2A — India Relevance Score": {
+      "main": [
+        [
+          {
+            "node": "Filter 2B — Strategic Intelligence Score",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Filter 2B — Strategic Intelligence Score": {
+      "main": [
+        [
+          {
+            "node": "Filter 2C — Hard Filter",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Filter 2C — Hard Filter": {
+      "main": [
+        [
+          {
+            "node": "filter3 - Hard “noise\"",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Filter 2.0 — Garbage Filter": {
+      "main": [
+        [
+          {
+            "node": "Filter 2A — India Relevance Score",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "FilterA — Exact Dedup": {
+      "main": [
+        [
+          {
+            "node": "filter1 - 24-hour date",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "final filter": {
+      "main": [
+        []
+      ]
+    }
+  },
+  "pinData": {},
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "cf26f66e818c7bebbc7427fb58df1d54178bd4a43ceda2547e87ced40d509b64"
+  }
+}
